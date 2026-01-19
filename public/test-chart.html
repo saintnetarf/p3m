@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Chart API</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .chart-container { width: 100%; height: 400px; margin: 20px 0; }
+        pre { background: #f4f4f4; padding: 10px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>Test Chart API</h1>
+
+    <h2>Research Chart</h2>
+    <div class="chart-container">
+        <canvas id="researchChart"></canvas>
+    </div>
+
+    <h2>API Response:</h2>
+    <pre id="apiResponse">Loading...</pre>
+
+    <script>
+        // Test API
+        fetch('/api/chart/research')
+            .then(response => response.json())
+            .then(data => {
+                console.log('API Data:', data);
+                document.getElementById('apiResponse').textContent = JSON.stringify(data, null, 2);
+
+                // Render Chart
+                const ctx = document.getElementById('researchChart');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: data.labels,
+                        datasets: data.datasets
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Data Penelitian per Tahun (Berdasarkan Kategori)'
+                            },
+                            legend: {
+                                display: true,
+                                position: 'top'
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Jumlah'
+                                }
+                            },
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Tahun'
+                                }
+                            }
+                        }
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('apiResponse').textContent = 'Error: ' + error.message;
+            });
+    </script>
+</body>
+</html>
