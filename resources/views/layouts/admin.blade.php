@@ -122,6 +122,10 @@
                 <i class="bi bi-download me-2"></i> File Download
             </a>
 
+            <a class="nav-link {{ request()->routeIs('admin.pengukuran-tkt.*') ? 'active' : '' }}" href="{{ route('admin.pengukuran-tkt.index') }}">
+                <i class="bi bi-graph-up me-2"></i> Pengukuran TKT
+            </a>
+
             <div class="px-3 mt-3 mb-2">
                 <small class="text-success text-uppercase">Statistik</small>
             </div>

@@ -7,6 +7,7 @@ use App\Http\Controllers\Frontend\NewsController as FrontendNewsController;
 use App\Http\Controllers\Frontend\ResearchProductController as FrontendResearchProductController;
 use App\Http\Controllers\Frontend\AnnouncementController as FrontendAnnouncementController;
 use App\Http\Controllers\Frontend\DownloadController as FrontendDownloadController;
+use App\Http\Controllers\Frontend\PengukuranTktController as FrontendPengukuranTktController;
 use App\Http\Controllers\Frontend\ChartController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HeaderController;
@@ -16,6 +17,7 @@ use App\Http\Controllers\Admin\ResearchProductController;
 use App\Http\Controllers\Admin\AnnouncementController;
 use App\Http\Controllers\Admin\DownloadCategoryController;
 use App\Http\Controllers\Admin\DownloadController;
+use App\Http\Controllers\Admin\PengukuranTktController;
 use App\Http\Controllers\Admin\ResearchStatisticController;
 use App\Http\Controllers\Admin\ServiceStatisticController;
 use App\Http\Controllers\Admin\PublicationStatisticController;
@@ -53,6 +55,11 @@ Route::get('/pengumuman/{announcement}', [FrontendAnnouncementController::class,
 Route::get('/download', [FrontendDownloadController::class, 'index'])->name('downloads.index');
 Route::get('/download/{download}', [FrontendDownloadController::class, 'download'])->name('downloads.download');
 Route::get('/download/kategori/{category:slug}', [FrontendDownloadController::class, 'category'])->name('downloads.category');
+
+// Pengukuran TKT
+Route::get('/pengukuran-tkt', [FrontendPengukuranTktController::class, 'index'])->name('pengukuran-tkt.index');
+Route::get('/pengukuran-tkt/{pengukuranTkt:slug}', [FrontendPengukuranTktController::class, 'show'])->name('pengukuran-tkt.show');
+Route::get('/pengukuran-tkt/{pengukuranTkt:slug}/download', [FrontendPengukuranTktController::class, 'download'])->name('pengukuran-tkt.download');
 
 // Charts
 Route::get('/grafik', [ChartController::class, 'index'])->name('charts.index');
@@ -93,6 +100,9 @@ Route::middleware(['auth', 'admin.or.operator'])->prefix('admin')->name('admin.'
 
     // Downloads
     Route::resource('downloads', DownloadController::class);
+
+    // Pengukuran TKT
+    Route::resource('pengukuran-tkt', PengukuranTktController::class);
 
     // Statistics
     Route::resource('research-statistics', ResearchStatisticController::class);

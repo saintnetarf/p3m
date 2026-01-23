@@ -110,6 +110,11 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('pengukuran-tkt.*') ? 'active' : '' }}" href="{{ route('pengukuran-tkt.index') }}">
+                            <i class="bi bi-graph-up me-1"></i> TKT
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('charts.*') ? 'active' : '' }}" href="{{ route('charts.index') }}">
                             <i class="bi bi-bar-chart me-1"></i> Grafik
                         </a>
