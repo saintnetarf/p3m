@@ -40,14 +40,14 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('storage/banner/4.jpg') }}" class="d-block w-100" alt="Pengabdian Masyarakat" style="height: 400px; object-fit: cover;">
+                            <img src="{{ asset('storage/banner/5.jpg') }}" class="d-block w-100" alt="Pengabdian Masyarakat" style="height: 400px; object-fit: cover;">
                             <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
                                 <h5>Pengabdian Masyarakat</h5>
                                 <p>Memberikan dampak nyata kepada masyarakat</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('storage/banner/6.jpg') }}" class="d-block w-100" alt="Kolaborasi & Inovasi" style="height: 400px; object-fit: cover;">
+                            <img src="{{ asset('storage/banner/5.jpg') }}" class="d-block w-100" alt="Kolaborasi & Inovasi" style="height: 400px; object-fit: cover;">
                             <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
                                 <h5>Kolaborasi & Inovasi</h5>
                                 <p>Membangun kemitraan untuk solusi berkelanjutan</p>
