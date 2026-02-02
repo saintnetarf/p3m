@@ -36,7 +36,9 @@
         <div class="col-md-6 col-lg-4">
             <div class="card h-100 border-0 shadow-sm hover-lift">
                 @if($product->image)
-                    <img src="{{ Storage::url($product->image) }}" class="card-img-top" alt="{{ $product->title }}" style="height: 220px; object-fit: cover;">
+                    <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 220px; overflow: hidden;">
+                        <img src="{{ Storage::url($product->image) }}" class="img-fluid" alt="{{ $product->title }}" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
                 @else
                     <div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 220px;">
                         <i class="bi bi-book text-secondary" style="font-size: 3.5rem;"></i>

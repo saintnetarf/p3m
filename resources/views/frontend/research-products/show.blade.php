@@ -24,7 +24,9 @@
         <div class="col-lg-8">
             <div class="card border-0 shadow-sm mb-4">
                 @if($product->image)
-                    <img src="{{ Storage::url($product->image) }}" class="card-img-top" alt="{{ $product->title }}" style="max-height: 400px; object-fit: cover;">
+                    <div class="card-img-top bg-light d-flex align-items-center justify-content-center p-3" style="min-height: 300px;">
+                        <img src="{{ Storage::url($product->image) }}" class="img-fluid rounded" alt="{{ $product->title }}" style="max-height: 500px; width: 100%; object-fit: contain;">
+                    </div>
                 @endif
                 <div class="card-body p-4">
                     <div class="mb-3">
@@ -40,7 +42,7 @@
                         @endif
                     </div>
 
-                    <h1 class="mb-4">{{ $product->title }}</h1>
+                    <h5 class="mb-4">{{ $product->title }}</h5>
 
                     <div class="mb-4">
                         <div class="row g-3">

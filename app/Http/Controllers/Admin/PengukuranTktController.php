@@ -35,17 +35,17 @@ class PengukuranTktController extends Controller
         try {
             $validated = $request->validate([
                 'title' => 'required|string|max:255',
-                'description' => 'nullable|string',
-                'kategori' => 'nullable|string|max:255',
-                'level_tkt' => 'nullable|integer|min:1|max:9',
+                // 'description' => 'nullable|string',
+                // 'kategori' => 'nullable|string|max:255',
+                // 'level_tkt' => 'nullable|integer|min:1|max:9',
                 'file' => 'required|file|mimes:pdf,doc,docx,xls,xlsx,ppt,pptx,zip,rar|max:20480',
             ], [
                 'file.required' => 'File harus diupload.',
                 'file.file' => 'File tidak valid.',
                 'file.mimes' => 'Format file harus: PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, ZIP, atau RAR.',
                 'file.max' => 'Ukuran file maksimal 20MB.',
-                'level_tkt.min' => 'Level TKT minimal 1.',
-                'level_tkt.max' => 'Level TKT maksimal 9.',
+                // 'level_tkt.min' => 'Level TKT minimal 1.',
+                // 'level_tkt.max' => 'Level TKT maksimal 9.',
             ]);
 
             $validated['slug'] = Str::slug($validated['title']);
@@ -86,15 +86,15 @@ class PengukuranTktController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'kategori' => 'nullable|string|max:255',
-            'level_tkt' => 'nullable|integer|min:1|max:9',
+            // 'description' => 'nullable|string',
+            // 'kategori' => 'nullable|string|max:255',
+            // 'level_tkt' => 'nullable|integer|min:1|max:9',
             'file' => 'nullable|file|mimes:pdf,doc,docx,xls,xlsx,ppt,pptx,zip,rar|max:20480',
         ], [
             'file.mimes' => 'Format file harus: PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, ZIP, atau RAR.',
             'file.max' => 'Ukuran file maksimal 20MB.',
-            'level_tkt.min' => 'Level TKT minimal 1.',
-            'level_tkt.max' => 'Level TKT maksimal 9.',
+            // 'level_tkt.min' => 'Level TKT minimal 1.',
+            // 'level_tkt.max' => 'Level TKT maksimal 9.',
         ]);
 
         $validated['slug'] = Str::slug($validated['title']);

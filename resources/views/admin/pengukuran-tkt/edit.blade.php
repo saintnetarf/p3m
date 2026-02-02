@@ -28,7 +28,7 @@
                             @enderror
                         </div>
 
-                        <div class="row">
+                        {{-- <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="kategori" class="form-label">Kategori</label>
                                 <input type="text" class="form-control @error('kategori') is-invalid @enderror"
@@ -50,7 +50,7 @@
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="mb-3">
                             <label for="description" class="form-label">Deskripsi</label>

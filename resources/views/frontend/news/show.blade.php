@@ -23,7 +23,9 @@
         <div class="col-lg-8">
             <article class="card border-0 shadow-sm mb-4">
                 @if($news->image)
-                    <img src="{{ Storage::url($news->image) }}" class="card-img-top" alt="{{ $news->title }}" style="max-height: 450px; object-fit: cover;">
+                    <div class="card-img-top bg-light d-flex align-items-center justify-content-center p-3" style="min-height: 300px;">
+                        <img src="{{ Storage::url($news->image) }}" class="img-fluid rounded" alt="{{ $news->title }}" style="max-height: 500px; width: 100%; object-fit: contain;">
+                    </div>
                 @endif
                 <div class="card-body p-4">
                     <!-- Category Badge -->
@@ -85,7 +87,9 @@
                     <div class="col-md-4">
                         <div class="card border-0 shadow-sm h-100 hover-lift">
                             @if($related->image)
-                                <img src="{{ Storage::url($related->image) }}" class="card-img-top" alt="{{ $related->title }}" style="height: 150px; object-fit: cover;">
+                                <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 150px; overflow: hidden;">
+                                    <img src="{{ Storage::url($related->image) }}" class="img-fluid" alt="{{ $related->title }}" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                                </div>
                             @else
                                 <div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 150px;">
                                     <i class="bi bi-newspaper text-secondary" style="font-size: 2rem;"></i>

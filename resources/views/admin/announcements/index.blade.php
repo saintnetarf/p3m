@@ -33,10 +33,10 @@
                         <tr>
                             <th style="width: 5%;">#</th>
                             <th style="width: 30%;">Judul</th>
-                            <th style="width: 15%;">Tanggal Mulai</th>
-                            <th style="width: 15%;">Tanggal Selesai</th>
+                            <th style="width: 15%;">Tanggal</th>
+                            {{-- <th style="width: 15%;">Tanggal Selesai</th> --}}
                             <th style="width: 12%;">Penulis</th>
-                            <th style="width: 10%;" class="text-center">Status</th>
+                            {{-- <th style="width: 10%;" class="text-center">Status</th> --}}
                             <th style="width: 8%;" class="text-center">Prioritas</th>
                             <th style="width: 5%;" class="text-center">Aksi</th>
                         </tr>
@@ -47,9 +47,9 @@
                                 <td>{{ $loop->iteration + ($announcements->currentPage() - 1) * $announcements->perPage() }}</td>
                                 <td><strong>{{ $announcement->title }}</strong></td>
                                 <td>{{ $announcement->start_date->format('d M Y') }}</td>
-                                <td>{{ $announcement->end_date->format('d M Y') }}</td>
+                                {{-- <td>{{ $announcement->end_date->format('d M Y') }}</td> --}}
                                 <td>{{ $announcement->author ? $announcement->author->name : '-' }}</td>
-                                <td class="text-center">
+                                {{-- <td class="text-center">
                                     @php
                                         $now = now();
                                         $isActive = $announcement->start_date <= $now && $announcement->end_date >= $now;
@@ -61,7 +61,7 @@
                                     @else
                                         <span class="badge bg-warning text-dark">Terjadwal</span>
                                     @endif
-                                </td>
+                                </td> --}}
                                 <td class="text-center">
                                     @if($announcement->is_important)
                                         <span class="badge bg-danger"><i class="bi bi-exclamation-triangle-fill"></i> Penting</span>

@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <h1 class="display-4 fw-bold mb-3">Pusat Penelitian dan Pengabdian kepada Masyarakat Politeknik Negeri Banjarmasin</h1>
+                <h6 class="display-6 fw-bold mb-3">Pusat Penelitian dan <br> Pengabdian kepada Masyarakat <br> Politeknik Negeri Banjarmasin</h6>
                 <p class="lead">Mendorong inovasi dan pengabdian untuk kemajuan masyarakat melalui penelitian berkualitas dan pengabdian yang berdampak.</p>
                 <div class="mt-4">
                     <a href="{{ route('research.index') }}" class="btn btn-light btn-lg me-2">

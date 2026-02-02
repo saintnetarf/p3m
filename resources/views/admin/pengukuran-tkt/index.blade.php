@@ -33,8 +33,8 @@
                         <tr>
                             <th style="width: 5%;">#</th>
                             <th style="width: 25%;">Judul</th>
-                            <th style="width: 15%;">Kategori</th>
-                            <th style="width: 8%;" class="text-center">Level TKT</th>
+                            {{-- <th style="width: 15%;">Kategori</th>
+                            <th style="width: 8%;" class="text-center">Level TKT</th> --}}
                             <th style="width: 15%;">Nama File</th>
                             <th style="width: 10%;" class="text-center">Ukuran</th>
                             <th style="width: 12%;">Penulis</th>
@@ -47,7 +47,7 @@
                             <tr>
                                 <td>{{ $loop->iteration + ($pengukuran_tkt->currentPage() - 1) * $pengukuran_tkt->perPage() }}</td>
                                 <td><strong>{{ $tkt->title }}</strong></td>
-                                <td>
+                                {{-- <td>
                                     @if($tkt->kategori)
                                         <span class="badge bg-primary">{{ $tkt->kategori }}</span>
                                     @else
@@ -60,7 +60,7 @@
                                     @else
                                         <span class="text-muted">-</span>
                                     @endif
-                                </td>
+                                </td> --}}
                                 <td>
                                     <small class="text-muted">
                                         @php

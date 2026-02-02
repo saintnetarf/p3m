@@ -39,7 +39,7 @@
             </div>
 
             <!-- Level TKT Filter -->
-            <div class="card border-0 shadow-sm mb-4">
+            {{-- <div class="card border-0 shadow-sm mb-4">
                 <div class="card-body">
                     <h5 class="card-title mb-3">
                         <i class="bi bi-bar-chart-fill text-success me-2"></i>Level TKT
@@ -57,11 +57,11 @@
                         @endfor
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Kategori Filter -->
             @if($categories->count() > 0)
-            <div class="card border-0 shadow-sm">
+            {{-- <div class="card border-0 shadow-sm">
                 <div class="card-body">
                     <h5 class="card-title mb-3">
                         <i class="bi bi-folder-fill text-warning me-2"></i>Kategori
@@ -79,7 +79,7 @@
                         @endforeach
                     </div>
                 </div>
-            </div>
+            </div> --}}
             @endif
         </div>
 

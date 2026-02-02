@@ -26,7 +26,7 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-
+{{-- 
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="kategori" class="form-label">Kategori</label>
@@ -59,7 +59,7 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                             <small class="form-text text-muted">Deskripsi singkat tentang pengukuran TKT ini</small>
-                        </div>
+                        </div> --}}
 
                         <div class="mb-3">
                             <label for="file" class="form-label">File <span class="text-danger">*</span></label>

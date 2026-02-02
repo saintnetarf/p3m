@@ -11,12 +11,12 @@
             <div class="col-lg-8 mx-auto text-center">
                 <h1 class="display-5 fw-bold mb-3">Berita & Informasi</h1>
                 <p class="lead">Berita terkini seputar kegiatan penelitian dan pengabdian kepada masyarakat</p>
-                
+
                 <!-- Search Form -->
                 <div class="mt-4">
                     <form action="{{ route('news.index') }}" method="GET" class="d-flex justify-content-center">
                         <div class="input-group" style="max-width: 500px;">
-                            <input type="text" class="form-control form-control-lg" name="search" 
+                            <input type="text" class="form-control form-control-lg" name="search"
                                    placeholder="Cari berita..." value="{{ request('search') }}">
                             <button class="btn btn-light" type="submit">
                                 <i class="bi bi-search"></i> Cari
@@ -38,7 +38,9 @@
                 <div class="col-md-6">
                     <article class="card h-100 border-0 shadow-sm hover-lift">
                         @if($item->image)
-                            <img src="{{ Storage::url($item->image) }}" class="card-img-top" alt="{{ $item->title }}" style="height: 200px; object-fit: cover;">
+                            <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px; overflow: hidden;">
+                                <img src="{{ Storage::url($item->image) }}" class="img-fluid" alt="{{ $item->title }}" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                            </div>
                         @else
                             <div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 200px;">
                                 <i class="bi bi-newspaper text-secondary" style="font-size: 3rem;"></i>
