@@ -21,7 +21,7 @@
         <!-- Sidebar -->
         <div class="col-lg-3">
             <!-- Search -->
-            <div class="card border-0 shadow-sm mb-4">
+            {{-- <div class="card border-0 shadow-sm mb-4">
                 <div class="card-body">
                     <h5 class="card-title mb-3">
                         <i class="bi bi-search text-primary me-2"></i>Pencarian
@@ -36,7 +36,7 @@
                         </button>
                     </form>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Level TKT Filter -->
             {{-- <div class="card border-0 shadow-sm mb-4">
@@ -112,8 +112,7 @@
                     <div>
                         <h6 class="alert-heading mb-1">Tentang TKT</h6>
                         <p class="mb-0 small">
-                            Technology Readiness Level (TKT) adalah metode sistematis untuk menilai tingkat kematangan
-                            suatu teknologi dari tahap riset dasar (Level 1) hingga implementasi penuh (Level 9).
+                            TKT atau Tingkat Kesiapterapan Teknologi adalah tingkat kondisi kematangan atau kesiapterapan suatu hasil penelitian dan pengembangan teknologi yang diukur secara sistematis dengan tujuan untuk dapat diadopsi oleh pengguna.
                         </p>
                     </div>
                 </div>
@@ -189,13 +188,13 @@
 
                                     <!-- Actions -->
                                     <div class="d-flex gap-2">
-                                        <a href="{{ route('pengukuran-tkt.show', $tkt->slug) }}"
+                                        {{-- <a href="{{ route('pengukuran-tkt.show', $tkt->slug) }}"
                                            class="btn btn-sm btn-outline-primary flex-grow-1">
                                             <i class="bi bi-eye me-1"></i>Detail
-                                        </a>
+                                        </a> --}}
                                         <a href="{{ route('pengukuran-tkt.download', $tkt->slug) }}"
                                            class="btn btn-sm btn-primary">
-                                            <i class="bi bi-download"></i>
+                                            <i class="bi bi-download"></i> Download File
                                         </a>
                                     </div>
                                 </div>
@@ -239,9 +238,9 @@
                         </div>
                         <h5 class="text-center">Riset Dasar</h5>
                         <ul class="small">
-                            <li>Prinsip dasar diamati</li>
-                            <li>Konsep teknologi dirumuskan</li>
-                            <li>Bukti konsep eksperimental</li>
+                            <li>Level 1 Prinsip dasar dari teknologi diteliti</li>
+                            <li>Level 2 Formulasi Konsep dan / aplikasi formulasi</li>
+                            <li>Level 3 Pembuktian konsep fungsi dan/atau karakteristik penting secara analitis dan eksperimental</li>
                         </ul>
                     </div>
                 </div>
@@ -252,11 +251,11 @@
                         <div class="text-center mb-3">
                             <span class="badge bg-warning" style="font-size: 1.5rem;">Level 4-6</span>
                         </div>
-                        <h5 class="text-center">Pengembangan Teknologi</h5>
+                        <h5 class="text-center">Riset Terapan</h5>
                         <ul class="small">
-                            <li>Validasi komponen di laboratorium</li>
-                            <li>Validasi sistem di lingkungan terkait</li>
-                            <li>Demonstrasi prototipe di lingkungan operasional</li>
+                            <li>Level 4 Validasi komponen/subsistem dalam lingkungan laboratorium</li>
+                            <li>Level 5 Validasi komponen/subsistem dalam suatu lingkungan yang relevan</li>
+                            <li>Level 6 Demonstrasi model atau prototipe system/subsistem dalam suatu lingkungan yang relevan</li>
                         </ul>
                     </div>
                 </div>
@@ -267,11 +266,11 @@
                         <div class="text-center mb-3">
                             <span class="badge bg-success" style="font-size: 1.5rem;">Level 7-9</span>
                         </div>
-                        <h5 class="text-center">Implementasi</h5>
+                        <h5 class="text-center">Riset Pengembangan</h5>
                         <ul class="small">
-                            <li>Demonstrasi sistem dalam lingkungan operasional</li>
-                            <li>Sistem teruji dan telah beroperasi</li>
-                            <li>Sistem terbukti melalui operasi sukses</li>
+                            <li>Level 7 Demonstrasi prototipe sistem dalam lingkungan sebenarnya</li>
+                            <li>Level 8 Sistem telah lengkap dan handal melalui pengujian dan demonstrasi dalam lingkungan sebenarnya</li>
+                            <li>Level 9 Sistem benar-benar teruji/terbukti melalui keberhasilan pengoperasian</li>
                         </ul>
                     </div>
                 </div>

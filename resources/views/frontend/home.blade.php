@@ -89,14 +89,17 @@
                             <div class="d-flex align-items-start">
                                 <i class="bi bi-bell-fill text-warning fs-4 me-3 mt-1"></i>
                                 <div class="flex-grow-1">
-                                    <h6 class="mb-1">{{ $announcement->title }}</h6>
+                                    <h4 class="mb-1">{{ $announcement->title }}</h4>
                                     <p class="text-muted small mb-2">{{ Str::limit(strip_tags($announcement->content), 100) }}</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <small class="text-muted">
                                             <i class="bi bi-calendar me-1"></i>{{ $announcement->start_date->format('d M Y') }}
                                         </small>
-                                        <a href="{{ route('announcements.show', $announcement->slug) }}" class="btn btn-sm btn-outline-primary">
+                                        {{-- <a href="{{ route('announcements.show', $announcement->slug) }}" class="btn btn-sm btn-outline-primary">
                                             Detail <i class="bi bi-arrow-right"></i>
+                                        </a> --}}
+                                        <a href="{{ route('announcements.show', $announcement->id) }}" class="btn btn-outline-primary btn-sm">
+                                        Selengkapnya <i class="bi bi-arrow-right"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -120,7 +123,7 @@
                     <div class="col-md-6">
                         <div class="card h-100 border-0 shadow-sm">
                             @if($news->image)
-                            <img src="{{ Storage::url($news->image) }}" class="card-img-top" alt="{{ $news->title }}" style="height: 180px; object-fit: cover;">
+                            <img src="{{ Storage::url($news->image) }}" class="card-img-top" alt="{{ $news->title }}" style="height: 180px; object-fit: contain;">
                             @else
                             <div class="bg-light d-flex align-items-center justify-content-center" style="height: 180px;">
                                 <i class="bi bi-image text-secondary" style="font-size: 2.5rem;"></i>
@@ -128,7 +131,7 @@
                             @endif
                             <div class="card-body">
                                 <span class="badge bg-primary mb-2">{{ $news->category->name }}</span>
-                                <h6 class="card-title">{{ Str::limit($news->title, 50) }}</h6>
+                                <h4 class="card-title">{{ Str::limit($news->title, 50) }}</h4>
                                 <p class="card-text text-muted small">{{ Str::limit(strip_tags($news->content), 80) }}</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <small class="text-muted">

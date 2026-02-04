@@ -85,7 +85,8 @@
                                 @endif
                                 <small class="text-muted">
                                     <i class="bi bi-calendar me-1"></i>
-                                    {{ $announcement->start_date->format('d M Y') }} - {{ $announcement->end_date->format('d M Y') }}
+                                    {{ $announcement->start_date->format('d M Y')  }}
+                                    {{-- {{ $announcement->start_date->format('d M Y') }} - {{ $announcement->end_date->format('d M Y') }} --}}
                                 </small>
                                 <small class="text-muted ms-3">
                                     <i class="bi bi-person me-1"></i>

@@ -42,7 +42,7 @@
                         @endif
                     </div>
 
-                    <h5 class="mb-4">{{ $product->title }}</h5>
+                    <h2 class="mb-4">{{ $product->title }}</h2>
 
                     <div class="mb-4">
                         <div class="row g-3">
@@ -101,10 +101,10 @@
                             <small class="text-muted d-block">Dipublikasikan oleh</small>
                             <strong>{{ $product->author->name }}</strong>
                         </li>
-                        <li class="mb-3">
+                        {{-- <li class="mb-3">
                             <small class="text-muted d-block">Tanggal Publikasi</small>
                             <strong>{{ $product->created_at->format('d M Y') }}</strong>
-                        </li>
+                        </li> --}}
                         @if($product->file)
                         <li class="mb-3">
                             <small class="text-muted d-block">Dokumen</small>
