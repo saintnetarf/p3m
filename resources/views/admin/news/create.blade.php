@@ -44,9 +44,9 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="content" class="form-label">Konten Berita <span class="text-danger">*</span></label>
+                            <label for="content" class="form-label">Konten Berita <span class="text-danger"></span></label>
                             <textarea class="form-control @error('content') is-invalid @enderror"
-                                      id="content" name="content" rows="10" required>{{ old('content') }}</textarea>
+                                      id="content" name="content" rows="10" >{{ old('content') }}</textarea>
                             @error('content')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror

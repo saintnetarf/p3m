@@ -34,7 +34,7 @@ class AnnouncementController extends Controller
             ->whereDate('start_date', '<=', now())
             ->whereDate('end_date', '>=', now())
             ->where('is_important', true)
-            ->orderBy('start_date', 'desc')
+            ->orderBy('created_at', 'desc')
             ->limit(3)
             ->get();
 

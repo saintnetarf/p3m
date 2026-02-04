@@ -13,7 +13,7 @@ class Announcement extends Model
     protected $fillable = [
         'title',
         'slug',
-        'content',
+      //  'content',
         'file_pdf',
         'start_date',
         'end_date',

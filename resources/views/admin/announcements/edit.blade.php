@@ -30,9 +30,9 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="content" class="form-label">Isi Pengumuman <span class="text-danger">*</span></label>
+                            <label for="content" class="form-label">Isi Pengumuman <span class="text-danger"></span></label>
                             <textarea class="form-control @error('content') is-invalid @enderror"
-                                      id="content" name="content" rows="8" required>{{ old('content', $announcement->content) }}</textarea>
+                                      id="content" name="content" rows="8" >{{ old('content', $announcement->content) }}</textarea>
                             @error('content')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
@@ -58,7 +58,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="start_date" class="form-label">Tanggal Mulai <span class="text-danger">*</span></label>
+                                    <label for="start_date" class="form-label">Tanggal <span class="text-danger">*</span></label>
                                     <input type="date" class="form-control @error('start_date') is-invalid @enderror"
                                            id="start_date" name="start_date" value="{{ old('start_date', $announcement->start_date->format('Y-m-d')) }}" required>
                                     @error('start_date')
@@ -66,16 +66,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="end_date" class="form-label">Tanggal Selesai <span class="text-danger">*</span></label>
-                                    <input type="date" class="form-control @error('end_date') is-invalid @enderror"
-                                           id="end_date" name="end_date" value="{{ old('end_date', $announcement->end_date->format('Y-m-d')) }}" required>
-                                    @error('end_date')
-                                        <div class="invalid-feedback">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
+
                         </div>
 
                         <div class="mb-3">

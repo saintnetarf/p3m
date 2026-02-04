@@ -25,7 +25,7 @@ class NewsController extends Controller
             });
         }
 
-        $news = $query->latest('published_at')->paginate(12);
+        $news = $query->latest('created_at')->paginate(12);
         $categories = NewsCategory::withCount('news')->get();
 
         return view('frontend.news.index', compact('news', 'categories'));

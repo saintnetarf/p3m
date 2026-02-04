@@ -33,9 +33,9 @@ class HomeController extends Controller
 
         // Get active announcements
  //       $announcements = Announcement::active()
-        $announcements = Announcement::latest()
+        $announcements = Announcement::latest('start_date')
             // ->important()
-            ->latest()
+            ->latest('start_date')
             ->take(5)
             ->get();
 

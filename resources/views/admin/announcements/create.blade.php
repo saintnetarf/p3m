@@ -29,9 +29,9 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="content" class="form-label">Isi Pengumuman <span class="text-danger">*</span></label>
+                            <label for="content" class="form-label">Isi Pengumuman <span class="text-danger"></span></label>
                             <textarea class="form-control @error('content') is-invalid @enderror"
-                                      id="content" name="content" rows="8" required>{{ old('content') }}</textarea>
+                                      id="content" name="content" rows="8" >{{ old('content') }}</textarea>
                             @error('content')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror

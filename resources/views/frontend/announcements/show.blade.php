@@ -45,10 +45,7 @@
                             <i class="bi bi-calendar-event me-1"></i>
                             {{ $announcement->start_date->format('d M Y') }}
                         </div>
-                        <div>
-                            <i class="bi bi-calendar-check me-1"></i>
-                            Berlaku s/d {{ $announcement->end_date->format('d M Y') }}
-                        </div>
+                       
                     </div>
 
                     <!-- Content -->
