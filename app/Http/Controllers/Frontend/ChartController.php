@@ -217,7 +217,7 @@ class ChartController extends Controller
         // Prepare datasets for each category
         $datasets = [];
         $colors = [
-            'rgba(255, 193, 7, 1)',    // Amber
+            'rgb(11, 29, 234)',    // Amber
             'rgba(156, 39, 176, 1)',   // Purple
             'rgba(96, 125, 139, 1)',   // Blue Grey
             'rgba(0, 150, 136, 1)',    // Teal
@@ -278,7 +278,7 @@ class ChartController extends Controller
         // Prepare datasets for each category
         $datasets = [];
         $colors = [
-            'rgba(108, 117, 125, 1)',  // Gray
+            'rgb(195, 231, 11)',  // Gray
             'rgba(111, 66, 193, 1)',   // Violet
             'rgba(13, 110, 253, 1)',   // Blue
             'rgba(220, 53, 69, 1)',    // Red

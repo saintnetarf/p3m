@@ -35,9 +35,10 @@
                     <tr>
                         <td>{{ $statistics->firstItem() + $index }}</td>
                         <td>{{ $stat->year }}</td>
-                        <td>
+                        {{-- <td>
                             <span class="badge bg-danger">{{ $stat->category }}</span>
-                        </td>
+                        </td> --}}
+                        <td>{{ $stat->category }}</td>
                         <td>{{ $stat->count }}</td>
                         <td>
                             <div class="btn-group btn-group-sm">

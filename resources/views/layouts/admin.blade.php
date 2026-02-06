@@ -140,11 +140,11 @@
             </a>
 
             <a class="nav-link {{ request()->routeIs('admin.publication-statistics.*') ? 'active' : '' }}" href="{{ route('admin.publication-statistics.index') }}">
-                <i class="bi bi-file-text me-2"></i> Data Publikasi
+                <i class="bi bi-file-text me-2"></i> Data Jurnal
             </a>
 
             <a class="nav-link {{ request()->routeIs('admin.proseding-statistics.*') ? 'active' : '' }}" href="{{ route('admin.proseding-statistics.index') }}">
-                <i class="bi bi-journal-text me-2"></i> Data Proseding
+                <i class="bi bi-journal-text me-2"></i> Data Prosiding
             </a>
 
             <a class="nav-link {{ request()->routeIs('admin.book-statistics.*') ? 'active' : '' }}" href="{{ route('admin.book-statistics.index') }}">
@@ -152,7 +152,7 @@
             </a>
 
             <a class="nav-link {{ request()->routeIs('admin.hak-cipta-statistics.*') ? 'active' : '' }}" href="{{ route('admin.hak-cipta-statistics.index') }}">
-                <i class="bi bi-shield-check me-2"></i> Data Hak Cipta
+                <i class="bi bi-shield-check me-2"></i> Data KI
             </a>
 
             @if(auth()->user()->isAdmin())

@@ -91,7 +91,7 @@
     <div class="row mb-5">
         <div class="col-12">
             <div class="card shadow-sm border-0">
-                <div class="card-header bg-warning text-dark">
+                <div class="card-header bg-primary text-dark">
                     <h5 class="mb-0"><i class="bi bi-graph-up me-2"></i>Tren Prosiding per Tahun (Berdasarkan Kategori)</h5>
                 </div>
                 <div class="card-body">
@@ -406,7 +406,7 @@
                 '<div class="alert alert-danger"><i class="bi bi-exclamation-triangle me-2"></i>Gagal memuat data publikasi</div>';
         });
 
-    // Configuration for Proseding Line Chart
+    // Configuration for Prosiding Line Chart
     fetch('{{ route('charts.proseding.data') }}')
         .then(response => response.json())
         .then(data => {
